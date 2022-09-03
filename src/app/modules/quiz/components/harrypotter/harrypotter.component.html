@@ -1,24 +1,49 @@
 <h1>Que personaje de Harry Potter eres</h1>
 <p>Completa el siguiente formulario para conocer que personaje de harry potter eres.</p>
 <form [formGroup]="formGroup">
-    <label for="nacimiento">Fecha de nacimiento</label>
-    <input name="nacimiento"
-          formControlName="nacimiento"
-          type="date" />
-    <label for="name">Nombre</label>
-    <input name="name"
-          formControlName="name"
-          type="text" />
-    <label for="email">E-mail</label>
-    <input name="email"
-          formControlName="email"
-          type="email" />
-    <label for="password">Password</label>
-    <input name="password"
-          formControlName="password"
-          type="password" />
+    <div class="row">
+        <div class="col-1">    
+            <label for="nacimiento">Fecha de nacimiento:</label>
+        </div>
+        <div class="col-1">
+            <input name="nacimiento"
+                formControlName="nacimiento"
+                type="date" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">    
+            <label for="name">Nombre:</label>
+        </div>
+        <div class="col-1">     
+            <input name="name"
+            formControlName="name"
+            type="text" />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-1">    
+            <label for="email">E-mail:</label>
+        </div>
+        <div class="col-1">     
+            <input name="email"
+            formControlName="email"
+            type="email" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-1">
+            <button [disabled]="formGroup.invalid">
+                <a *ngIf="!formGroup.invalid" href="/harrypotter">Ver personaje</a>
+                <a *ngIf="formGroup.invalid">Ver personaje</a>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <span *ngIf="formGroup.invalid" class="warning">*Porfavor rellene todos los campos</span>
+        </div>
+    </div>
   </form>
-    <button [disabled]="formGroup.invalid">
-        <a *ngIf="!formGroup.invalid" href="/harrypotter">Ver personaje</a>
-        <a *ngIf="formGroup.invalid">Ver personaje</a>
-    </button>
