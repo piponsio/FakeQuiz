@@ -1,0 +1,15 @@
+
+<h1 class="title">Tu personaje de Harry Potter es: </h1>
+<div *ngIf="characterRandom" class="row">
+    <div class="col-5">
+        <img [src]="characterRandom.image" class="center">
+    </div>
+    <div class="col-3 characterData">
+        <div class="row">Nombre: {{characterRandom.name}}</div>
+        <div class="row">Especie: {{characterRandom.species}}</div>
+        <div class="row">Genero: {{characterRandom.gender}}</div>
+        <div class="row">Casa: {{characterRandom.house}}</div>
+    </div>
+<p class="center"><small> JsonData: {{characterRandom | json}}</small></p>
+</div>
+<hr>

@@ -1,0 +1,9 @@
+.characterData{
+    margin-left: 15px;
+}
+img.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
