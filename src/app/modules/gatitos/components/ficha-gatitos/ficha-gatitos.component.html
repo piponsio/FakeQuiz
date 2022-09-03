@@ -1,0 +1,7 @@
+<h1 class="title">Gatito Random</h1>
+
+<div *ngFor="let item of gatito;" class="img-center">
+    <img [src]="item.url" class="center">
+<br>
+<p class="center"><small> JsonData: {{item | json}}</small></p>
+</div>
