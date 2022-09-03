@@ -7,3 +7,15 @@ img.center{
     margin-right: auto;
     width: 40%;
 }
+.Gryffindor{
+    color: red;
+}
+.Slytherin{
+    color: green;
+}
+.Ravenclaw{
+    color: blue;
+}
+.Hufflepuff{
+    color: yellow;
+}

@@ -8,7 +8,7 @@
         <div class="row">Nombre: {{characterRandom.name}}</div>
         <div class="row">Especie: {{characterRandom.species}}</div>
         <div class="row">Genero: {{characterRandom.gender}}</div>
-        <div class="row">Casa: {{characterRandom.house}}</div>
+        <div class="row" [ngClass]="{'Gryffindor': gryffindor, 'Slytherin': slytherin, 'Ravenclaw': ravenclaw, 'Hufflepuff': hufflepuff}">Casa: {{characterRandom.house}}</div>
     </div>
 <p class="center"><small> JsonData: {{characterRandom | json}}</small></p>
 </div>

@@ -13,6 +13,12 @@ export class RandomCharacterComponent implements OnInit {
   public characters:charactersInterface[] = [];
   public characterRandom?:charactersInterface;
 
+  public gryffindor = false;
+  public slytherin = false;
+  public ravenclaw = false;
+  public hufflepuff = false;
+
+
   constructor(
     private harrypotterService:HarrypotterService
   ) { }
@@ -30,7 +36,11 @@ export class RandomCharacterComponent implements OnInit {
         return request[Math.floor(Math.random() * (request.length -1 - 0 + 1)) + 0];
       }
       do{ this.characterRandom = returnRandom() }while(this.characterRandom.image=="");
-      this.characters = request; 
+      this.characters = request;
+      if(this.characterRandom.house == "Gryffindor") this.gryffindor = true;
+      if(this.characterRandom.house == "Slytherin") this.slytherin = true;
+      if(this.characterRandom.house == "Ravenclaw") this.ravenclaw = true;
+      if(this.characterRandom.house == "Hufflepuff") this.hufflepuff = true;
     });
   }
 
