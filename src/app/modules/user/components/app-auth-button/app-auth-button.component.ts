@@ -3,14 +3,14 @@ import { AuthService } from '@auth0/auth0-angular';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  selector: 'app-auth-button',
+  templateUrl: './app-auth-button.component.html',
+  styleUrls: ['./app-auth-button.component.css']
 })
-export class MenuComponent implements OnInit {
+export class AppAuthButtonComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) public document: Document, public auth: AuthService) {}
-
+ 
   ngOnInit(): void {
   }
 

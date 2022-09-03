@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ThemeRoutingModule } from './theme-routing.module';
+
 import { HeaderComponent } from './header/header.component';
-import { E404Component } from './header/error/e404/e404.component';
+import { E404Component } from './error/e404/e404.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
+import { UserModule } from '../../modules/user/user.module';
 
 
 @NgModule({
@@ -13,11 +15,19 @@ import { MenuComponent } from './menu/menu.component';
     HeaderComponent,
     E404Component,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     CommonModule,
+    UserModule,
     ThemeRoutingModule
+  ],
+  exports:[
+    HeaderComponent,
+    E404Component,
+    FooterComponent,
+    MenuComponent,
+    UserModule
   ]
 })
 export class ThemeModule { }
